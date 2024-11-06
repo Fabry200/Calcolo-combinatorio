@@ -102,39 +102,7 @@ Genera combinazioni con ripetizioni.
 ## Esempio di utilizzo
 
 ```python
-A = ['a', 'b', 'c']
-
-matrice = []
-length = len(A)
-
-esponente = 1
-inizio = 0
-
-Matrix = []
-
-matrice = [[] for n in range(length)]
-
-while inizio != length:
-    for x in A:
-        for j in range(0, length**(length - esponente)):
-            matrice[inizio].append(x)
-    if inizio >= 1:
-        while len(matrice[0]) != len(matrice[inizio]):
-            for x in A:
-                for j in range(0, length**(length - esponente)):
-                    matrice[inizio].append(x)
-                    if len(matrice[inizio]) == len(matrice[0]):
-                        break
-                if len(matrice[inizio]) == len(matrice[0]):
-                    break
-    inizio += 1
-    esponente += 1
-
-for col in range(len(matrice[0])):
-    listina = []
-    for row in range(len(matrice)):
-        listina.append(matrice[row][col])
-    Matrix.append(listina)
+A = ['a', 'b', 'c']  (modificare solo i parametri al interno)
 
 # Esempio di combinazioni senza ripetizioni
 print(combinazionisenzaripetizioni(Matrix, A, 2))
